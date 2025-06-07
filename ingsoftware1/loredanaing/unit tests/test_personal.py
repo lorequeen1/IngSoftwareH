@@ -1,7 +1,7 @@
 import pytest
-from App_Hotel.models import Personal
-from App_Hotel.services import PersonalService
-from App_Hotel.repositories import PersonalRepository
+from loredanaing.models import Personal
+from loredanaing.services import PersonalService
+from loredanaing.repositories import PersonalRepository
 from rest_framework.test import APIClient
 from django.urls import reverse
 

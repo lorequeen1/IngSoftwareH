@@ -1,7 +1,7 @@
 import pytest
-from App_Hotel.models import Habitacion
-from App_Hotel.services import HabitacionService
-from App_Hotel.repositories import HabitacionRepository
+from loredanaing.models import Habitacion
+from loredanaing.services import HabitacionService
+from loredanaing.repositories import HabitacionRepository
 from rest_framework.test import APIClient
 from django.urls import reverse
 

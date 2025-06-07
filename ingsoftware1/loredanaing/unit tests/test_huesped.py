@@ -1,7 +1,7 @@
 import pytest
-from App_Hotel.models import Huesped
-from App_Hotel.services import HuespedService
-from App_Hotel.repositories import HuespedRepository
+from loredanaing.models import Huesped
+from loredanaing.services import HuespedService
+from loredanaing.repositories import HuespedRepository
 from rest_framework.test import APIClient
 from django.urls import reverse
 

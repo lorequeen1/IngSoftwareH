@@ -1,7 +1,7 @@
 import pytest
-from App_Hotel.models import Pago
-from App_Hotel.services import PagoService
-from App_Hotel.repositories import PagoRepository
+from loredanaing.models import Pago
+from loredanaing.services import PagoService
+from loredanaing.repositories import PagoRepository
 from rest_framework.test import APIClient
 from django.urls import reverse
 

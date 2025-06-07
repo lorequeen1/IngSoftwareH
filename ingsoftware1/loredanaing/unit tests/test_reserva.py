@@ -1,7 +1,7 @@
 import pytest
-from App_Hotel.models import Reserva
-from App_Hotel.services import ReservaService
-from App_Hotel.repositories import ReservaRepository
+from loredanaing.models import Reserva
+from loredanaing.services import ReservaService
+from loredanaing.repositories import ReservaRepository
 from rest_framework.test import APIClient
 from django.urls import reverse
 
