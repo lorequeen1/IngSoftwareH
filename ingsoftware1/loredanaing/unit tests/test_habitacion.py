@@ -36,3 +36,10 @@ def test_create_habitacion_service():
     assert habitacion.numero == 20
     assert habitacion.estado == "OCUPADA"
 
+# Pruebas de Repositorios
+@pytest.mark.django_db
+def test_get_all_habitaciones_repository():
+    repository = HabitacionRepository()
+    habitaciones = repository.get_all()
+    assert len(habitaciones) == 0  # Asumiendo que la base de datos esté vacía al inicio de la prueba
+
