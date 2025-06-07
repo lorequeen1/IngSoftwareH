@@ -43,3 +43,20 @@ def test_get_all_habitaciones_repository():
     habitaciones = repository.get_all()
     assert len(habitaciones) == 0  # Asumiendo que la base de datos esté vacía al inicio de la prueba
 
+# Pruebas de Controladores (ViewSets)
+@pytest.mark.django_db
+def test_get_habitaciones_viewset():
+    client = APIClient()
+    response = client.get(reverse('habitacion-list'))
+    assert response.status_code == 200
+    assert response.json() == []
+
+@pytest.mark.django_db
+def test_create_habitacion_viewset():
+    client = APIClient()
+    data = {'tipo': 'SUITE', 'numero': 1, 'estado': 'RESERVADA'}
+    response = client.post(reverse('habitacion-list'), data, format='json')
+    assert response.status_code == 201
+    assert response.json()['tipo'] == 'SUITE'
+    assert response.json()['numero'] == 1
+    assert response.json()['estado'] == 'RESERVADA'
